@@ -1,0 +1,39 @@
+app:
+  server_addr: ":7879"
+  sign_prefix: "^$Sc4Foe" #签名前缀
+  sign_suffix: "W^g54^Vn" #签名后缀
+  cron_host_name: "aigtech-stage-aigoa01" #运行cron的主机名
+
+mysql:
+  - ins_name: "mysql"
+    host: "127.0.0.1:3306"
+    username: "root"
+    password: "123456"
+    dbname: "user"
+    net: "tcp"
+    charset: "utf8mb4"
+
+mongo:
+  - ins_name: "mongo"
+    addr: "mongodb://root:password@127.0.0.1:27017/admin"
+    max_pool_size: 10
+    #pem_path: "./rds-combined-ca-bundle.pem"
+
+redis:
+  - ins_name: "redis"
+    addr: "127.0.0.1:6379"
+    auth: ""
+    db: 0
+    conn_timeout: 2000
+    read_timeout: 2000
+    write_timeout: 2000
+    max_idle: 50
+    max_active: 100
+    idle_timeout: 50
+    max_wait: true
+log:
+  log_path: "/data/logs"
+  req_path: "./logs/req.log"
+  cron_path: "./logs/cron.log"
+  info_path: "./logs/info.log"
+  error_path: "./logs/error.log"
